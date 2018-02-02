@@ -1,0 +1,19 @@
+.mock-padding {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 200px;
+}
+
+.main-content {
+  // border: 1px solid lightblue;
+}
+
+.r {
+  border: 1px solid red;
+}
+.g {
+  border: 1px solid green;
+}
+.b {
+  border: 1px solid blue;
+}
