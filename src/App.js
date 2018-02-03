@@ -1,13 +1,11 @@
 import React from 'react';
-// import logo from './logo.svg';
+import { Flex, Box } from 'grid-styled'
+
 import './App.css';
 import { CatalogEntryView as catalogEntries } from './item-data.json';
-import TitleCarousel from './ProductView/TitleCarousel';
-import Detail from './ProductView/Detail';
-import Reviews from './ProductView/Reviews';
-
-
-import { Flex, Box } from 'grid-styled'
+import ImageCarousel from './components/ProductView/ImageCarousel';
+import ProductInfo from './components/ProductView/ProductInfo';
+import Reviews from './components/ProductView/Reviews';
 
 
 
@@ -21,20 +19,22 @@ const carouselImages = [primaryImage].concat(alternateImages);
 
 const title = catalogEntry.title;
 const price = catalogEntry.Offers[0].OfferPrice[0].formattedPriceValue;
+const reviews = catalogEntry.CustomerReview[0];
 
 const App = () => {
   return (
     <div className='mock-padding'>
       <div className='main-content'>
         <Flex wrap>
-          <Box width={[1, 1, 1, 1/2]} px={0} className='r'>
-            <TitleCarousel carouselImages={carouselImages} primaryImage={primaryImage} title={title} />
+          <Box width={[1, 1, 1, 1/2]} px={0} className='title-carousel-container'>
+            <h1 className='h1 title'>{title}</h1>
+            <ImageCarousel images={carouselImages} />
           </Box>
           <Box width={[1, 1, 1, 1/2]} px={0} className='g'>
-            <Detail price={price} />
+            <ProductInfo price={price} />
           </Box>
-          <Box width={[1, 1, 1, 1/2]} px={0} className='b'>
-            <Reviews />
+          <Box width={[1, 1, 1, 1/2]} px={0} className=''>
+            <Reviews reviews={reviews} />
           </Box>
         </Flex>
       </div>

@@ -16,7 +16,7 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font-weight: inherit;
-    font-style: inherit;
+    font-style: 14px;
     font-family: sans-serif;
     vertical-align: baseline;
 }
@@ -101,29 +101,35 @@ input[type="checkbox"] {
 
 
 
-
+.txt {
+    line-height: 1.4;
+    font-weight: normal;
+    font-size: 14px;
+}
+.bold {
+    font-weight: bold;
+}
+small {
+    font-size: 13px;
+    color: grey;
+}
 
 .h1 {
     display: block;
     font-size: 30px;
 }
-
 .h2 {
     display: block;
     font-size: 20px;
 }
-
 .h3 {
     display: block;
     font-size: 16px;
 }
-
 .h4 {
     display: block;
     font-size: 14px;
 }
-
-
 
 
 
