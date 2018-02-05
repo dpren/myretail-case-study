@@ -5,7 +5,15 @@ import './ProductView.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
+/**
+ * This is essentially a wrapper around a react-slick carousel that displays
+ * a large version of the selected image above.
+ *
+ * TODO: implement "view larger" feature
+ *
+ * @class ImageCarousel
+ * @props {images}
+ */
 export default class ImageCarousel extends React.Component {
   // initial slide
   state = { selectedIndex: 0 };
@@ -21,7 +29,6 @@ export default class ImageCarousel extends React.Component {
     slidesToShow: 3,
     speed: 0,
     swipe: false,
-    initialSlide: this.selectedIndex,
     beforeChange: this.slideChangeHandler,
   }
 
@@ -31,7 +38,7 @@ export default class ImageCarousel extends React.Component {
         <img
           src={this.props.images[this.state.selectedIndex]}
           className='selected-image'
-          alt={this.props.altText || ''}
+          alt=''
         />
         <div className='carousel-thumbnail-container'>
           <SlickCarousel {...this.slickSettings}>
