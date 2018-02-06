@@ -1,19 +1,20 @@
-//----------------------------------------------------------------------
+/*----------------------------------------------------------------------
 // ImageCarousel
-//----------------------------------------------------------------------
+//----------------------------------------------------------------------*/
 
 .title {
   text-align: center;
+  line-height: 1.2;
+  font-family: helvetica-light;
 }
 
 .title-carousel-container {
-  // background: lightgrey;
-  padding: 30px;
   text-align: center;
 }
 
 .selected-image {
-  width: 80%;
+  width: 90%;
+  max-width: 400px;
   padding-top: 50px;
   padding-bottom: 80px;
 }
@@ -25,19 +26,169 @@
   margin-right: auto;
 }
 
-//----------------------------------------------------------------------
+/*----------------------------------------------------------------------
 // ProductInfo
-//----------------------------------------------------------------------
+//----------------------------------------------------------------------*/
 
 .price {
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 1.2;
   font-weight: bold;
 }
 
+.quantity {
+  width: 240px;
+  height: 24px;
+  padding: 6px 12px 12px 12px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  color: #333333;
+}
+.quantity-left {
+  float: left;
+  padding-top: 6px;
+}
+.quantity-right {
+  float: right;
+}
+.quantity-number {
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-//----------------------------------------------------------------------
+.promotions {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+.promotions ul {
+  padding-left: 20px;
+  color: #CB0000;
+}
+.promotions li:last-child {
+  padding-bottom: 0;
+}
+.promotions li {
+  padding-bottom: 6px;
+  padding-left: 3px;
+  list-style-image: url(data:image/png;base64,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);
+}
+
+.btn-reset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-decoration: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.big-btn {
+  // btn reset
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-decoration: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  // btn
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background: grey;
+  color: #FFFFFF;
+  box-shadow: 0px 1px 1px grey;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+      border .15s,
+      background-color .01s,
+      box-shadow .1s,
+      color .01s;
+}
+
+.big-btn:focus,
+.big-btn:hover {
+    box-shadow: 0px 1px 2px #555;
+}
+
+.big-btn-black {
+  border-color: black;
+  background: linear-gradient(0deg, #000 60%, #666);
+}
+.big-btn-black:focus,
+.big-btn-black:hover {
+  background: linear-gradient(0deg, #111 52%, #666);
+}
+
+.big-btn-red {
+  border-color: #CB0000;
+  background: linear-gradient(0deg, #CB0000 60%, #FF7777);
+}
+.big-btn-red:focus,
+.big-btn-red:hover {
+  background: linear-gradient(0deg, #d00b0b 52%, #FF7777);
+}
+
+
+.find-in-a-store {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.returns {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-right: 1px solid lightgrey;
+  font-size: 18px;
+  color: grey;
+  line-height: 1.3;
+}
+
+.return-policy {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 10px;
+  color: grey;
+  line-height: 1.3;
+}
+
+.register-list-share-btn {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  padding: 8px 5px 8px 5px;
+  background: #F6F5F5;
+  color: #333333;
+  font-family: helvetica-light;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-highlights-list {
+  color: grey;
+  list-style: disc;
+  padding-left: 20px;
+  font-family: helvetica-light;
+}
+
+.product-highlights-list li {
+  padding-bottom: 8px;
+}
+
+/*----------------------------------------------------------------------
 // Reviews
-//----------------------------------------------------------------------
+//----------------------------------------------------------------------*/
 
 .top-row {
   // padding: 20px;
