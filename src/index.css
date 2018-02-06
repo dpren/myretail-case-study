@@ -1,3 +1,6 @@
+/*----------------------------------------------------------------------
+// reset css
+//----------------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -87,19 +90,21 @@ input[type="checkbox"] {
 }
 
 
+/*--------------------------------------
+// myRetail specific reset
+//--------------------------------------*/
+
+small {
+    font-size: 13px;
+    color: grey;
+    font-family: helvetica-light, sans-serif;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
+/*----------------------------------------------------------------------
+// global utilities
+//----------------------------------------------------------------------*/
 
 .txt {
     line-height: 1.4;
@@ -109,11 +114,6 @@ input[type="checkbox"] {
 .bold {
     font-weight: bold;
 }
-small {
-    font-size: 13px;
-    color: grey;
-}
-
 .h1 {
     display: block;
     font-size: 30px;
@@ -133,8 +133,9 @@ small {
 
 
 
-
-
+/*----------------------------------------------------------------------
+// slick overrides
+//----------------------------------------------------------------------*/
 
 .slick-track {
     height: 70px;
