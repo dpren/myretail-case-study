@@ -2,11 +2,11 @@ import React from 'react';
 import { Flex, Box } from 'grid-styled'
 
 import './App.css';
-import product from './mock-ajax-response';
-import ImageCarousel from './components/ProductView/ImageCarousel';
-import ProductInfo from './components/ProductView/ProductInfo';
-import Reviews from './components/ProductView/Reviews';
-import getCheckoutBtnsStyle from './components/ProductView/getCheckoutBtnsStyle';
+import product from './mock-ajax-response.js';
+import ImageCarousel from './components/ProductView/ImageCarousel.js';
+import ProductInfo from './components/ProductView/ProductInfo.js';
+import Reviews from './components/ProductView/Reviews.js';
+import getCheckoutBtnsStyle from './components/ProductView/getCheckoutBtnsStyle.js';
 
 
 const checkoutBtnsStyle = getCheckoutBtnsStyle(product.purchasingChannelCode);
@@ -15,7 +15,7 @@ const changeQuantity = (amount) => (state) => ({
   orderQuantity: Math.max(0, state.orderQuantity + amount)
 });
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     orderQuantity: 1
   }
@@ -52,4 +52,9 @@ export default class App extends React.Component {
       </div>
     );
   }
+}
+
+export {
+  App,
+  changeQuantity
 }
