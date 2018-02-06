@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 /**
  * This is essentially a wrapper around a react-slick carousel that displays
- * a large version of the selected image above.
+ * a large version above of the selected image.
  *
  * TODO: implement "view larger" feature
  *
